@@ -26,26 +26,26 @@ namespace v0617
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if(vx < 0){
-                vx = 10;
-            }
-            if(vy < 0){
-                vy = 10;
-            }
-            if (vx > ClientSize.Width)
-            {
-                vx = -10;
-            }
-            if (vy > ClientSize.Height)
-            {
-                vy = -10;
-            }
+            //do nothing
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Left += vx;
             label1.Top += vy;
+
+            if (label1.Left < 0){
+                vx = Math.Abs(vx);
+            }
+            if (label1.Top < 0){
+                vy = Math.Abs(vy);
+            }
+            if (label1.Left > ClientSize.Width - 30){
+                vx = -Math.Abs(vx);
+            }
+            if (label1.Top > ClientSize.Height - 30){
+                vy = -Math.Abs(vy);
+            }
         }
     }
 }
