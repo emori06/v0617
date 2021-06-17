@@ -41,9 +41,9 @@ namespace v0617
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(394, 185);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.Size = new System.Drawing.Size(61, 12);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "hi, George?\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer1
@@ -65,9 +65,8 @@ namespace v0617
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(613, 265);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 12);
+            this.label3.Size = new System.Drawing.Size(0, 12);
             this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
             // 
             // Form1
             // 
