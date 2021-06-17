@@ -14,6 +14,7 @@ namespace v0617
     {
 
         int vx = -10, vy = -10;
+        int score = 100;
         public Form1()
         {
             InitializeComponent();
@@ -46,6 +47,9 @@ namespace v0617
             if (label1.Top > ClientSize.Height - 30){
                 vy = -Math.Abs(vy);
             }
+
+            score--;
+            label2.Text = ("Score "+ score);
         }
     }
 }
