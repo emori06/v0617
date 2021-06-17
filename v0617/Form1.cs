@@ -13,11 +13,15 @@ namespace v0617
     public partial class Form1 : Form
     {
 
-        int vx = -10, vy = -10;
+        int vx = rand.Next(-10, 11), vy = rand.Next(-10, 11);
         int score = 100;
+        static Random rand = new Random();
         public Form1()
         {
             InitializeComponent();
+
+            label1.Left = rand.Next(ClientSize.Width);
+            label1.Top = rand.Next(ClientSize.Height);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,9 +61,9 @@ namespace v0617
             score--;
             label2.Text = ("Score "+ score);
 
-            if(label1.Left <= fpos.X && label1.Right > fpos.X 
-                && label1.Top <= fpos.Y && label1.Bottom > fpos.Y){
-                label1.Visible = false;
+            if(label1.Left <= fpos.X && label1.Right > fpos.X &&
+                 label1.Top <= fpos.Y && label1.Bottom > fpos.Y){
+                timer1.Enabled = false;
             }
         }
     }
